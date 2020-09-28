@@ -48,7 +48,7 @@ def search(q, peers):
                 max_date = None,  # Maximum date
                 offset_id = 0,    # ID of the message to use as offset
                 add_offset = 0,   # Additional offset
-                limit = 10,       # How many results
+                limit = 99999,       # How many results
                 max_id = 0,       # Maximum message ID
                 min_id = 0,       # Minimum message ID
                 hash = 0,
@@ -72,6 +72,7 @@ for result in RESULTS:
         GROUPLINKS.append('https://t.me/joinchat/' + LINK2.search(result.stringify()).group('link'))
 
 GROUPLINKS = list(set(GROUPLINKS))
+GROUPLINKS.sort()
 
 for grouplink in GROUPLINKS:
     with open('grouplinks', 'a') as f:
