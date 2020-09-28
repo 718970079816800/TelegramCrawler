@@ -69,7 +69,7 @@ for result in RESULTS:
     if LINK1.findall(result.stringify()):
         GROUPLINKS.append('https://t.me/' + LINK1.search(result.stringify()).group('link'))
     if LINK2.findall(result.stringify()):
-        GROUPLINKS.append('https://t.me/' + LINK2.search(result.stringify()).group('link'))
+        GROUPLINKS.append('https://t.me/joinchat/' + LINK2.search(result.stringify()).group('link'))
 
 GROUPLINKS = list(set(GROUPLINKS))
 
